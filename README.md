@@ -86,3 +86,61 @@ To find the total complexity, multiply the outer and inner loop complexities:
 ---
 
 
+# (B)
+
+---
+
+### 🔹 Static Operations
+If we consider the **other static operations** (like initialization, assignments, and conditional checks) as constant-time,  
+their time complexity will be:
+
+\[
+O(1)
+\]
+
+---
+
+### 🔹 Loop Analysis
+When we look at the loop, the `result` variable increases **exponentially**, since:
+
+\[
+\text{result} = i^2
+\]
+
+The loop will continue executing as long as:
+
+\[
+i^2 \leq x
+\]
+
+Hence, the loop runs approximately **√x times**, because the condition fails right after \( i > \sqrt{x} \).
+
+So the number of loop iterations (or operations) is proportional to:
+
+\[
+\sqrt{x}
+\]
+
+Therefore, the **time complexity of the loop** is:
+
+\[
+O(\sqrt{x})
+\]
+
+---
+
+### 🔹 Total Time Complexity
+
+When combining all operations:
+
+\[
+O(1) + O(\sqrt{x}) = O(\sqrt{x})
+\]
+
+✅ **Final Time Complexity:**
+
+```math
+O(\sqrt{x})
+```
+
+
